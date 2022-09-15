@@ -1,0 +1,372 @@
+9.1    2 Dimensional Arrays
+
+Declaration of 2D matrices
+1. 2D Arrays are declared similar to 1D arrays but with an additional dimension.
+Syntax: int arr[rows][columns] For example:
+Int arr[n][m];
+bool arr[n][m];
+char arr[n][m];
+float arr[n][m];
+Code: Taking input or print output of Array of matrx:
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    // Taking Input Array
+    int n, m;
+    cin>>n>>m;
+    int arr[n][m];
+    for(int i=0; i<n; i++){
+        for(int j=0; j<m; j++){
+            cin>>arr[i][j];
+        }
+    }
+    // Printing output array
+    for(int i=0; i<n; i++){
+        for(int j=0; j<m; j++){
+            cout<<arr[i][j]<<" ";
+        }
+        cout<<"\n";
+    }
+    return 0;
+}
+
+
+Searching in a matrix
+
+Problem: We have to find if value x is present in the 2D array.
+
+1.	While traversing in the 2D matrix, just we have to put one if 
+statement which checks if(a[i][j] == x) , then x is present otherwise not.
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n, m;
+    cin>>n>>m;
+    int arr[n][m];
+    // Taking Input Array
+    for(int i=0; i<n; i++){
+        for(int j=0; j<m; j++){
+            cin>>arr[i][j];
+        }
+    }
+    int x;
+    cin>>x;
+    bool flag= false;
+    for(int i=0; i<n; i++){
+        for(int j=0; j<m; j++){
+            if(arr[i][j]==x){
+                cout<<i<<" "<<j<<" "<<"\n";
+                flag=true;
+            }
+        }
+    }
+    if(flag){
+        cout<<"Element is Found\n";
+    }else{
+        cout<<"Element is not found\n";
+    }
+    return 0;
+}
+
+
+ 
+Spiral Order Matrix Traversal
+
+Problem: We have to print the given 2D matrix in the spiral order. 
+        Spiral Order means that firstly, first row is printed, then last column
+        is printed, then last row is printed and then first column is printed, 
+        then we will come inwards in the similar way.
+For example: 
+Spiral order is given by:
+1 5 7 9 10 11 21 41 70 105 95 81 79 70 40 15 9 6 10 12 13 20 32 68 63 59 55
+25 29 30 29.
+
+Code: Input the array first then perform the following code
+#include<bits/stdc++.h>
+using namespace std;
+/*  spiral order matrix Print in 2D-Array   */
+int main()
+{
+    int n,m;
+    cin>>n>>m;
+    int a[n][m];
+    // Taking Input Array
+    for(int i=0; i<n; i++){
+        for(int j=0; j<m; j++){
+            cin>>a[i][j];
+        }
+    }
+    // Spiral order 
+    int row_start = 0, row_end = n-1, column_start = 0, column_end = m-1;
+    while(row_start<=row_end && column_start<=column_end)
+    {
+        // for row_start
+        for(int col=column_start; col<=column_end; col++){
+            cout<< a[row_start][col]<<" ";
+        }
+        row_start++;
+        
+        // for column_end
+        for(int row = row_start; row <= row_end; row++){
+            cout<<a[row][column_end]<<" ";
+        }
+        column_end--;
+
+        // for row_end
+        for(int col=column_end; col>=column_start; col--){
+            cout<<a[row_end][col]<<" ";
+        }
+        row_end--;
+
+        // for column_start
+        for(int row=row_end; row>=row_start; row--){
+            cout<<a[row][column_start]<<" ";
+        }
+        column_start++;
+    } 
+    return 0;
+}
+
+
+9.2    2D Array Challenges
+Challenge 1 - Matrix Transpose
+
+Problem
+Given a square matrix A & its number of rows (or columns) N, return the transpose of A.
+The transpose of a matrix is the matrix flipped over its main diagonal,
+switching the row and column indices of the matrix.
+
+#include<iostream> 
+using namespace std;
+
+int main() 
+{
+    int N = 3;
+    int A[N][N] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+
+    for(int i=0; i<N; i++){ 
+        for(int j=i; j<N; j++){
+            //swap
+            int temp = A[i][j]; 
+            A[i][j] = A[j][i];
+            A[j][i] = temp;
+        }
+    }
+    //print transpose for(int i=0; i<N; i++) {
+    for(int i=0; i<N; i++){
+        for(int j=0; j<N; j++){
+            cout<<A[i][j]<<" ";
+        }
+        cout<<"\n";
+    }
+    return 0;
+}
+Time complexity : O(N2)
+Space complexity : O(1), as no extra space for a new matrix was used
+
+ 
+Challenge 2 - Matrix Multiplication
+
+Problem
+
+Given two 2-Dimensional arrays of sizes n1 x n2 and n2 x n3. 
+Your task is to multiply these matrices and output the multiplied matrix.
+
+
+Time  Complexity: O(n1*n2*n3) 
+#include<iostream>
+using namespace std;
+int main()
+{   int n1,n2,n3;   // n3 is answer print
+    cin >> n1 >> n2 >> n3;
+    int m1[n1][n2]; 
+    int m2[n2][n3]; 
+    // input array m1
+    for(int i=0; i<n1; i++) {
+        for(int j=0; j<n2; j++){
+            cin >> m1[i][j];
+        } 
+    }
+    // input array m2
+    for(int i=0; i<n2; i++) { 
+        for(int j=0; j<n3; j++){
+            cin >> m2[i][j];
+        }
+    }
+    // insalization of answer ans
+    int ans[n1][n3];
+    for(int i=0; i<n1; i++) { 
+        for(int j=0; j<n3; j++){
+            ans[i][j] = 0;
+        }
+    }
+    
+    for(int i=0; i<n1; i++) { 
+        for(int j=0; j<n3; j++)
+        {
+            for(int k=0; k<n2; k++) {
+                ans[i][j] += m1[i][k]*m2[k][j];
+            }
+        }
+    }
+    for(int i=0; i<n1; i++) {     // print ans
+        for(int j=0; j<n3; j++){
+            cout << ans[i][j] <<" ";
+        } 
+        cout << endl;
+    }
+    return 0;
+}
+
+
+Challenge 3 - 2D matrix Search
+
+Problem
+
+Given  n x m matrix.  Write an algorithm to find that the given value exists
+ in the matrix or not. Integers in each row are sorted in ascending from left
+ to right. Integers in each column are sorted in ascending from top to bottom.
+ 
+ Constraints
+
+
+Solution 1 : Brute Force Approach      Q. Linear search in a 2D Array. 
+#include "bits/stdc++.h" 
+using namespace std;
+int main() 
+{   int n, m; 
+    cin >> n >> m; 
+    int target; 
+    cin >> target; 
+    int mat[n][m];
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) { 
+            cin >> mat[i][j];
+        }
+    }
+    bool found = false;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) { 
+            if (mat[i][j] == target){
+                found = true;
+            }
+        }
+    }
+    if (found){
+    cout << "Found";
+    }
+    else{
+    cout << "Not Found";
+    }return 0;
+}	
+Time complexity : O(N*M)
+
+Solution 2:  Optimised Approach [IMP]
+
+#include "bits/stdc++.h" 
+using namespace std; 
+int main() {
+    int n, m; 
+    cin >> n >> m; 
+    int target; 
+    cin >> target; 
+    int mat[n][m];
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) { 
+            cin >> mat[i][j];
+        }
+    }
+    bool found = false; 
+    int r = 0, c = n - 1;
+    while (r < m && c >= 0) {
+        if (mat[r][c] == target) { 
+            found = true;
+        }
+        mat[r][c] > target ? c-- : r++;
+    }
+    if (found){
+        cout << "Found";
+    }else{
+    cout << "Not Found";
+    }
+}
+Time complexity : O(N + M)
+
+
+
+10. Character Arrays ( char)
+
+Important Questions
+
+1.	Check if a given character array is a palindrome or not.
+Palindrome: Given a string s, on reversing the string we get the same string we call that string is a palindrome.
+
+
+#include<bits/stdc++.h>
+using namespace std;
+/*  Check palindrome    */
+int main()
+{
+    int n;
+    cin>>n;
+    char arr[n+1];
+    cin>>arr;
+
+    bool check = 1;
+    for (int i=0; i<n; i++)
+    {
+        if(arr[i] != arr[n-1-i]){
+            check = 0;
+            break;
+        }
+    }
+    if(check == true)
+        cout<<"word is a Palindrome"<<endl;
+    else
+        cout<<"word is not a Palindrome"<<endl;   
+    return 0;
+}
+
+
+2.	Question: Largest word in a sentence
+
+#include<bits/stdc++.h>
+using namespace std;
+/*  Large Worde in Sentance of char array   */
+int main()
+{   int n;
+    cin>>n;
+    cin.ignore();
+    char arr[n+1];
+
+    cin.getline(arr, n); //in_build function used 
+    cin.ignore();
+
+    int i=0;
+    int currLen = 0, maxLen = 0;
+    int st=0, maxst=0;
+    while(1)
+    {
+        if(arr[i] == ' ' || arr[i] == '\0')     // ' ' space used 
+        {
+            if(currLen > maxLen){
+                maxLen = currLen;
+                maxst = st;
+            }
+            currLen = 0;
+            st = i+1;
+        }
+        else
+        currLen++;
+        if(arr[i] == '\0')
+            break;
+        i++;
+    }
+    cout<<maxLen<<endl;
+    for(int i=0; i<maxLen; i++){
+        cout<<arr[i+maxst];
+    }
+    return 0;
+}
