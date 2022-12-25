@@ -1,3 +1,5 @@
+## Time Complexity:
+
 **Time complexity** of any algorithm is the time taken by the algorithm to complete. It is an important metric to show the efficiency of the algorithm and for comparative analysis. We tend to reduce the time complexity of algorithm that makes it more effective.
 **There are different types of time complexities used, let’s see one by one:**
 
