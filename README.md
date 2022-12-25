@@ -149,31 +149,32 @@ To declare an array, define the variable type, specify the name of the array fol
 - Performing operation like concatenating and append is easier.
 - Terminated with a special character ‘\0’.
 
-        In-Build Function:-
-        getline(cin, s);        // input string
-        s1.append(s2);          // insert s1+s2
-        s.assign("Ribh");       // s = "Ribh"
-        cout<<s.at(3)<< endl;   // particular position
-        s.begin();              // first character
-        s.end();                // last character
-        s.clear();              // Erases all the contents
-        s2.compare(s1)          // s2 - s1
-        s.c_str();              // C-style string
-        s.empty();              // string is empty
-        s.erase();              // Deletes a substring
-        s.find();               // Searches the string
-        s.insert();             // Inserts additional characters
-        s.length();             // Returns the length of the string
-        s.size();               // Returns the length of the string
-        s.resize();             // Resize the string to the new length
-        s.substr(3, 4);         // copy of the string 3 to 4 is 3456
-        stoi(s);                // strings convert to a integer
-        to_string(s);           // convert integer to a string
-        sort(s.begin(),s.end());                                // use sort() function
-        transform(s.begin(), s.end(), s.begin(), ::toupper);    //convert upper
-        transform(s.begin(), s.end(), s.begin(), ::tolower);    //convert lower
-        sort(s.begin(), s.end(), greater<int>());               //sorting greater to lower
-        sort(s.begin(), s.end(), greater<int>());               // 999887443 sort
+**In-Build Function:-**
+
+    getline(cin, s);        // input string
+    s1.append(s2);          // insert s1+s2
+    s.assign("Ribh");       // s = "Ribh"
+    cout<<s.at(3)<< endl;   // particular position
+    s.begin();              // first character
+    s.end();                // last character
+    s.clear();              // Erases all the contents
+    s2.compare(s1)          // s2 - s1
+    s.c_str();              // C-style string
+    s.empty();              // string is empty
+    s.erase();              // Deletes a substring
+    s.find();               // Searches the string
+    s.insert();             // Inserts additional characters
+    s.length();             // Returns the length of the string
+    s.size();               // Returns the length of the string
+    s.resize();             // Resize the string to the new length
+    s.substr(3, 4);         // copy of the string 3 to 4 is 3456
+    stoi(s);                // strings convert to a integer
+    to_string(s);           // convert integer to a string
+    sort(s.begin(),s.end());                                // use sort() function
+    transform(s.begin(), s.end(), s.begin(), ::toupper);    //convert upper
+    transform(s.begin(), s.end(), s.begin(), ::tolower);    //convert lower
+    sort(s.begin(), s.end(), greater<int>());               //sorting greater to lower
+    sort(s.begin(), s.end(), greater<int>());               // 999887443 sort
 
 ## 13. Recursion:-
 
