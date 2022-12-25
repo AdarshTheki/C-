@@ -124,9 +124,9 @@ To declare an array, define the variable type, specify the name of the array fol
 
 **"Pointers are variables that store the address of other variables."** Getting started with the Pointers.Every variable is stored in the memory and each memory location has its own memory address. It enables us to pass variables by reference.
 
-**& Operator:** It gives the address of the variable.
+**'&' Operator:** It gives the address of the variable.
 
-*** Operator:** It gives the value stored at the address, i.e dereferences the value stored at the address
+**'*' Operator:** It gives the value stored at the address, i.e dereferences the value stored at the address
 
     Example:
     void swap(int *a, int *b){
