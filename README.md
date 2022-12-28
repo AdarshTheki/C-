@@ -1,4 +1,4 @@
-# C++ Basic to Advanced
+<h1 align="center">C++ Basic to Advanced</h1>
 
 ---
 
@@ -7,15 +7,15 @@
 There are three data types in C++. which are **Primitive Data Types, Abstract Data Types, & Derived Data Types**. Primitive data types includes integer(int), floating-point(float), character(chr), boolean(bool), double floating-point(double float), valueless or void, and wide char().**Initialisation, Size of DataType, Input-Output.**
 
     int main(){
-        int test;   //declaration
-        test = 5;   //initialization
+        int test;   // declaration
+        test = 5;   // initialization
         cin>>n;     // Input
-        cout<<n;    // Output (Print)
+        cout<<n;    // Output (Display)
     }
 
 ## 2 - Introduction of loops:
 
-The C++ for loop is used to iterate a part of the program several times. If the number of iteration is fixed, it is recommended to use **For, while & do-while loops.** The C++ for loop is same as C/C#. We can initialize variable, check condition and increment/decrement value.
+The C++ for loop is used to iterate a part of the program several times. If the number of iteration is fixed, it is recommended to use **for, while & do-while Loops.** The C++ for loop is same as C/C++. We can initialize variable, check condition and increment/decrement value.
 
 **For loop:**
 
@@ -90,6 +90,7 @@ The syntax of creating function in C++ language is given below:
 ## 6 - Time Complexity:
 
 **Time complexity** of any algorithm is the time taken by the algorithm to complete. It is an important metric to show the efficiency of the algorithm and for comparative analysis. We tend to reduce the time complexity of algorithm that makes it more effective.
+
 **There are different types of time complexities used, let’s see one by one:**
 
 1. Constant time – **O(1)**
@@ -104,18 +105,17 @@ Arrays are used to store multiple values in a single variable, instead of declar
 
 To declare an array, define the variable type, specify the name of the array followed by square brackets and specify the number of elements it should store:
 
-    Example: a = {1,2,3};   b = {a,b,c,d};
     int array[4] = {40,45,50,55};   // declaration
-    int   =  4 Bytes
-    Array = 4 X 4 bytes = 16 bytes 
+    int =  4 Bytes
+    Array = 4 X 4 bytes = 16 bytes
 
 ## 8 - 2D Array:
 
-**The multidimensional Array is also known as Rectangular arrays in C++**. It can be two dimensional or three dimensional. The data is stored in tabular form (row ∗ column) which is also known as matrix.
+**The multidimensional Array is also known as Rectangular Arrays in C++**. It can be two dimensional or three dimensional. The data is stored in tabular form (row ∗ column) which is also known as matrix.
 
     int main(){
         Int arr[n][m];  //declaration of 2D array
-        bool arr[n][m]; 
+        bool arr[n][m];
         char arr[n][m];
         float arr[n][m];
     }
