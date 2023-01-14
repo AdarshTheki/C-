@@ -222,3 +222,5 @@ To declare an array, define the variable type, specify the name of the array fol
 - A class is a template to create objects.
 - Treats data as a critical element.
 - Decomposes the problem in objects and builds data and functions around the objects.
+
+soon..
