@@ -15,7 +15,7 @@ The Fibonacci sequence is defined as follows:
 `F(0) = 0, F(1) = 1, F(n) = F(n-1) + F(n-2) for n > 1`
 
 A simple implementation of this algorithm in C++ using recursion is:
-```
+```c++
 int fib(int n) {
     if (n <= 1) return n;
     return fib(n-1) + fib(n-2);

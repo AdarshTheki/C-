@@ -2,7 +2,7 @@
 Function is a piece of code that prefors a specific task.
 
 The syntax of creating function in C++ language is given below:
-``` 
+```c++ 
 function_name(data_type parameter...){
     //code to be executed
 }

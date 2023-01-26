@@ -1,6 +1,6 @@
 ## Array:
 Array is a list of variables of similar type. 
-```
+```c++
 Ex: {1,2,3}    {a,b,c,d}
 dataType arrayName[size];
 

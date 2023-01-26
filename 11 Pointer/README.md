@@ -6,7 +6,7 @@ Getting started with the Pointers.Every variable is stored in the memory and eac
 **`&` Operator:** It gives the address of the variable.
 
 **`*` Operator:** It gives the value stored at the address, i.e dereferences the value stored at the address
-```
+```c++
 Example:
 void swap(int *a, int *b){
 int temp = *a;

@@ -9,7 +9,7 @@ Break also terminates the remaining iterations. Continue doesn't terminate the n
 ### Switch-Case Statement:
 
 Use the switch statement to select one of many code blocks to be executed.
-
+```c++
     Syntax:
     switch(expression) {
         case x:
@@ -21,3 +21,4 @@ Use the switch statement to select one of many code blocks to be executed.
         default:
             // code block
     }
+```
