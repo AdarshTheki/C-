@@ -2,22 +2,23 @@
 
 ---
 
-There are **95 keywords** in **C++**, of which around **30** are not-available in the **C** Language. Example:- `int`, `break`, `void`, `public`, `return` etc...
+There are **95 keywords** in **C++**, of which around **30** are not-available in the **C** Language. <br>
+Example:- `int`, `break`, `void`, `public`, `return` etc...
 
 ## 1 - Data Type:
-There are three DataTypes in C++. which are `Primitive`, `Abstract/User-Defined`, & `Derived DataTypes`. 
+There are Three DataTypes in C++. which are `Primitive`, `Abstract/User-Defined`, & `Derived DataTypes`. 
 
-**Primitive DataTypes** includes: `int`, `float`, `chr`, `bool`, `double float`, `valueless` or `void`, and `wchar_t`.
+**Primitive DataTypes** : `int`, `float`, `chr`, `bool`, `double float`, `valueless` or `void`, and `wchar_t`.
 
-**Dreived DataTypes** includes: `function`, `Array`, `pointer` & `Reference`.
+**Dreived DataTypes** : `function`, `Array`, `pointer` & `Reference`.
 
-**Abstract/User-Defined DataTypes** includes: `class`, `Structure`, `Unoin`, `Enum` & `typedef`.
+**Abstract/User-Defined DataTypes** : `class`, `Structure`, `Unoin`, `Enum` & `typedef`.
 
 ## Operators:
 -   **Unary Operators:**
-    -   It is only a single operand, Ex: increment`++` & decrement`--`.   
+    -   It is only a single operand, increment`++` & decrement`--`.   
 
--   **Binary Operators:** It is require two operands to act.
+-   **Binary Operators:**   It is require two operands to act.
     1.	Arithmetic operators  =  `+`, `-`, `*`, `/`, `%`
     2.	Relational Operators  =  `==`, `>=`, `<=`   
     3.	Logical Operators     =  `&&` and `||`
@@ -25,18 +26,15 @@ There are three DataTypes in C++. which are `Primitive`, `Abstract/User-Defined`
     5.	Bitwise Operator      =  `^`
 
 -   **Ternary Operator:**
-    -   The operator that require three operands to act
-        ``` syntax: (a != b)? True : False;  ```
+    -   The operator that require three operands to act.
+    -   ```c++ syntax:- (a != b)? True : False;  ```
 
 -   **Other Operators:**
     -   sizeof operator:
-        -   The `sizeof` the operator is used to compute the size of the variable. Ex: `sizeof(int)`.
+        -   The `sizeof` the operator is used to compute the size of the variable.   ex: `sizeof(int)`.
     -   Comma Operator `,`:
         -   Comma acts as both operator and separator, and its lowest precedence.
 
-**DataType:** Type of data that can be stored in this variable.<br> 
-**Variable_name:** Name given to the variable. <br>
-**value:** It is the initial value stored in the variable.
 ```c++
 int main(){
     int test;   // declaration
@@ -45,8 +43,8 @@ int main(){
     cout<<n;    // Output (Display)
 }
 ```
-## 2 - Introduction of loops:
-The C++ for loop is used to iterate a part of the program several times. If the number of iteration is fixed, it is recommended to use **`for`, `while` & `do-while` Loops.** The C++ for loop is same as C/C++. We can initialize variable, check condition and increment `++`/ decrement `--` value.
+## 2 - Introduction of Loops:
+The C++ for loop is used to iterate a part of the program several times. If the number of iteration is fixed, it is recommended to use `for`, `while` & `do-while` Loops. The C++ for loop is same as C++. We can initialize variable, check condition and increment `++`/ decrement `--` value.
 
 **For loop:**
 ```c++
