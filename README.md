@@ -108,16 +108,16 @@ switch(expression) {
 ```
 ## 4 - Star Pattern for Practice:
 
-In any programming language, star patterns are one of the common patterns that are widely used because it helps to improve logical thinking and flow control knowledge. **`To create pattern in the C++ language, you just have to use two loops or three loops`.**
+In any programming language, star patterns are one of the common patterns that are widely used because it helps to improve logical thinking and flow control knowledge. ***To create pattern in the C++ language, you just have to use two loops or three loops.***
 
 ## 5 - Function:
 *Function is a piece of code that preforms a specific task & can be called many times.* It provides modularity and code reusability.
 
 ### Types of Functions:
 
-1.  **Built-in Function:** Built-in functions are standard library functions in C++. These functions are already defined in C++ header files and `STL` *(Standard template library)*. Header files are special files with `.h extension`. We have to include the header file of the function before calling it using the include directive. such as Headerfile `<cmath>`- `pow(x), sqrt(x)`-,`<algorithm>`- `min(), max()`, `<string>`, `ceil(x)`, `cos(x)`, `exp(x)`, etc...
+1.  **Built-in Function:** *Built-in functions are standard library functions in C++*. These functions are already defined in C++ header files and `STL` *(Standard template library)*. Header files are special files with `.h extension`. We have to include the header file of the function before calling it using the include directive. such as Headerfile `<cmath>`- `pow(x), sqrt(x)` , `<algorithm>`- `min(), max()`, `<string>`, `ceil(x)`, `cos(x)`, `exp(x)`, etc...
 
-2.  **User-defined functions:** Functions created by the user for custom requirements. It reduces complexity of a big program and optimizes the code such as `sum(int, int)`, `swap(int, int)`, `void display()` etc...
+2.  **User-defined functions:** *Functions created by the user for custom requirements. It reduces complexity of a big program and optimizes the code* such as `sum(int, int)`, `swap(int, int)`, `void display()` etc...
 
 **Creating Function in C++:**
 ```c++
@@ -134,8 +134,8 @@ int main() {
 void myfunction(){
     cout<<"I just got executed!";
 }
+// Output: I just got executed!
 ```
-***Output:*** *"I just got executed!*
 
 ### Function Parameters:
 -   **Paramaters/Arguments:** It pass `Name` to function as parameter `Surname` & print the full name.
@@ -144,14 +144,14 @@ void myfunction(string Name){
     cout<<Name<< "Surname";     // Output: Name Surname
 }
 ```
--   **Default Parameter:** It is default value, by using equals sing `=`.
+-   **Default Parameter:**   It is default value, by using equals sing `=`.
 ```c++
 void myfunction(string country="India"){
     cout<<country;     // call myfunction("Sweden") = Output: Sweden  
     cout<<country;     // call myfunction() default = Output: India
 }
 ```
--   **Multiple parameters:** Inside the function, you can add as many parameters as you want:
+-   **Multiple parameters:**   Inside the function, you can add as many parameters as you want:
 ```c++
 void myfunction(string Name, int age){
     cout<<Name<<" Surname "<<age;  
@@ -160,7 +160,7 @@ void myfunction(string Name, int age){
 // call myfunction("ayush", 20) = Output: ayush Surname 20
 // call myfunction("ankita", 5) = Output: ankita Surname 5
 ```
--   **Return values:** If you want the function to `return` a value, you can use a `dataType` inside the function.
+-   **Return values:**   If you want the function to `return` a value, you can use a `dataType` inside the function.
 ```c++
 int myfunction(int x) {
     return 5 + x;   }
@@ -177,7 +177,7 @@ void swap(int &x, int &y){
     y = z;
 }
 ```
--   **Pass Arrays:** You can also pass `Array` to a function.
+-   **Pass Arrays:**   You can also pass `Array` to a function.
 ```c++
 void myfunction(int arr[], int n){
     for ( int i=0; i<n; i++){
@@ -197,10 +197,24 @@ int sum(int k){
 ### Function Overloading:
 It has multiple function can have the **"Same `Function_name` with Different `Parameters`"**.
 ```c++
-    int myfunction(int x, int y)
-    float myfunction(float x, float y)
-    int myfunction(int x, int y, int z)
-    
+#include <iostream>
+using namespace std;
+int myfunction(int x, int y) {
+    cout<< (x + y);
+}
+float myfunction(float x, float y) {
+    cout<< (x + y);
+}
+int myfunction(int x, int y, int z){
+    cout<< ((x + y) - z) ;
+}
+int main(){
+    int a=10, b=20, c=30, d=3.14 e=3.14;
+    myfunction(a,b);
+    myfunction(d,e);
+    myfunction(a,b,c);
+    return 0;
+}
 ```
 ## 6 - Time Complexity:
 **`Time complexity`** of any algorithm is the time taken by the algorithm to complete. It is an important metric to show the efficiency of the algorithm and for comparative analysis. We tend to reduce the time complexity of algorithm that makes it more effective.
