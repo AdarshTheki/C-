@@ -1,8 +1,41 @@
 <h1 align="center">C++ Basic to Advanced</h1>
 ---
 
+There are `95 keywords` in `C++`, of Which around `30` are Not-Available in the `C` Language. Example:- `int`, `break`, `void`, `public`, `return` etc...
+
 ## 1 - Data Type:
-There are three data types in C++. which are **`Primitive Data Types`, `Abstract Data Types`, & `Derived Data Types`**. Primitive data types includes integer(int), floating-point(float), character(chr), boolean(bool), double floating-point(double float), valueless or void, and wide char().**`Initialisation`, `Size of DataType`, `Input-Output`.**
+There are three data types in C++. which are `Primitive DataTypes`, `Abstract / User-Defined DataTypes`, & `Derived Data Types`. 
+
+Primitive DataTypes includes: `int`, `float`, `chr`, `bool`, `double float`, `valueless` or `void`, and `wchar_t`.
+
+Dreived DataTypes includes: `function`, `Array`, `pointer` & `Reference`.
+
+Abstract / User-Defined DataTypes includes: `class`, `Structure`, `Unoin`, `Enum` & `typedef`.
+
+## Operators:
+-   **Unary Operators:**
+    -   It is only a single operand, Ex: increment`++` & decrement`--`.   
+
+-   **Binary Operators:** It is require two operands to act.
+    1.	Arithmetic operators  =  `+`, `-`, `*`, `/`, `%`
+    2.	Relational Operators  =  `==`, `>=`, `<=`   
+    3.	Logical Operators     =  `&&` and `||`
+    4.	Assignment Operators  =  `=`, `+=` etc..
+    5.	Bitwise Operator      =  `^`
+
+-   **Ternary Operator:**
+    -   The operator that require three operands to act
+        ``` syntax: (a != b)? True : False;  ```
+
+-   **Other Operators:**
+    -   sizeof operator:
+        -   The `sizeof` the operator is used to compute the size of the variable. Ex: `sizeof(int)`.
+    -   Comma Operator `,`:
+        -   Comma acts as both operator and separator, and its lowest precedence.
+
+**DataType:** Type of data that can be stored in this variable.<br> 
+**Variable_name:** Name given to the variable. <br>
+**value:** It is the initial value stored in the variable.
 ```c++
 int main(){
     int test;   // declaration
@@ -17,7 +50,7 @@ The C++ for loop is used to iterate a part of the program several times. If the 
 **For loop:**
 ```c++
 Syntax:
-for(initialization expression; test expression; update expression){
+for(init_expt; test_exp; update){
         // statements to execute in the loop body
     }
 ```
@@ -29,7 +62,8 @@ while (test_expression){
     update_expression;
 }
 ```
-**Do While loop:**
+**Do While loop:** 
+Note: It will execute at least once irrespective of test condition.
 ```c++
 Syntax:
 do{
@@ -37,26 +71,40 @@ do{
     update_expression;
 }while(test_expression);
 ```
-## 3 - Statements:
+## 3 - Decision-Making Statements:
 
-### Break and Continue Statement:
-
-**Break statement stops the entire process of the loop. Continue statement only stops the current iteration of the loop.** Break also terminates the remaining iterations. Continue doesn't terminate the next iterations; it resumes with the successive iterations.
-
-### Switch-Case Statement:
-
-Use the switch statement to select one of many code `blocks` to be executed.
+*   **`if`-`else` Statement in C++:**
+    -   It is the most simple decision-making statement. A certain condition is true then a block of statement is `executed` otherwise `not`. 
 ```c++
-Syntax:
+if (condition) {
+    // Executes this block if
+    // condition is true
+}
+else {
+    // Executes this block if
+    // condition is false
+}
+```
+*   **Break and Continue Statement:**
+    -   **Break Statement:** stops the entire process of the loop. also terminates the remaining iterations.
+    -   **Continue Statement:** only stops the current iteration of the loop & doesn't terminate the next iterations; it resumes with the successive iterations.
+
+*   **Switch-Case Statement:**
+    -   Use the switch statement to select one of many code `blocks` to be executed.
+```c++
+// Syntax:
 switch(expression) {
     case x:
-        // code block
-        break;
+        // code block x
+        break;  // stops the entire process
     case y:
-        // code block
+        // code block y
+        continue;   // doesn't terminate the next iterations
+    case z:
+        // code block z
         break;
     default:
-        // code block
+        // code block not match x, y & z then executed.
 }
 ```
 ## 4 - Star Pattern for Practice:
@@ -64,24 +112,96 @@ switch(expression) {
 In any programming language, star patterns are one of the common patterns that are widely used because it helps to improve logical thinking and flow control knowledge. **`To create pattern in the C++ language, you just have to use two loops or three loops`.**
 
 ## 5 - Function:
-To perform any task, we can create function. A function can be called many times. It provides modularity and code reusability.
+*Function is a piece of code that preforms a specific task & can be called many times.* It provides modularity and code reusability.
 
-###### Types of Functions:
+### Types of Functions:
 
-**There are two types of functions in C++ programming:**
+1.  **Built-in Function:** Built-in functions are standard library functions in C++. These functions are already defined in C++ header files and `STL` *(Standard template library)*. Header files are special files with `.h extension`. We have to include the header file of the function before calling it using the include directive. such as Headerfile `<cmath>`- `pow(x), sqrt(x)`-,`<algorithm>`- `min(), max()`, `<string>`, `ceil(x)`, `cos(x)`, `exp(x)`, etc...
 
-**1. Library Functions:** are the functions which are declared in the C++ header files such as `ceil(x)`, `cos(x)`, `exp(x)`, etc.
+2.  **User-defined functions:** Functions created by the user for custom requirements. It reduces complexity of a big program and optimizes the code such as `sum(int, int)`, `swap(int, int)`, `void display()` etc...
 
-**2. User-defined functions:** are the functions which are created by the C++ programmer, so that he/she can use it many times. It reduces complexity of a big program and optimizes the code.
-
-**Declaration of a function**
-
-The `syntax` of creating function in C++ language is given below:
+**Creating Function in C++:**
 ```c++
-return_type function_name(data_type parameter...)
-{
-    //code to be executed
+#include <iostream>
+using namespace std;
+
+// function declaration
+void myfunction();
+// main function
+int main() {
+    myfunction();  // call the function
 }
+// function definition
+void myfunction(){
+    cout<<"I just got executed!";
+}
+```
+***Output:*** *"I just got executed!*
+
+### Function Parameters:
+-   **Paramaters/Arguments:** It pass `Name` to function as parameter `Surname` & print the full name.
+```c++ 
+void myfunction(string Name){
+    cout<<Name<< "Surname";     // Output: Name Surname
+}
+```
+-   **Default Parameter:** It is default value, by using equals sing `=`.
+```c++
+void myfunction(string country="India"){
+    cout<<country;     // call myfunction("Sweden") = Output: Sweden  
+    cout<<country;     // call myfunction() default = Output: India
+}
+```
+-   **Multiple parameters:** Inside the function, you can add as many parameters as you want:
+```c++
+void myfunction(string Name, int age){
+    cout<<Name<<" Surname "<<age;  
+}
+// call myfunction("adarsh", 12) = Output: adarsh Surname 12
+// call myfunction("ayush", 20) = Output: ayush Surname 20
+// call myfunction("ankita", 5) = Output: ankita Surname 5
+```
+-   **Return values:** If you want the function to `return` a value, you can use a `dataType` inside the function.
+```c++
+int myfunction(int x) {
+    return 5 + x;   }
+int main(){
+    cout<<myfunction(3);
+}
+//Output: 8 (5 + 3)
+```
+-   **Pass by Reference:** 
+```c++
+void swap(int &x, int &y){
+    int z = x;
+    x = y;
+    y = z;
+}
+```
+-   **Pass Arrays:** You can also pass `Array` to a function.
+```c++
+void myfunction(int arr[], int n){
+    for ( int i=0; i<n; i++){
+        cout<<mynumber[i]<<" ";
+    }
+}
+```
+-   **Recusion Function:** 
+```c++
+int sum(int k){
+    if(k > 0)
+        return k + sum(k - 1);
+    else
+        return 0;
+}
+```
+### Function Overloading:
+It has multiple function can have the **"Same `Function_name` with Different `Parameters`"**.
+```c++
+    int myfunction(int x, int y)
+    float myfunction(float x, float y)
+    int myfunction(int x, int y, int z)
+    
 ```
 ## 6 - Time Complexity:
 **`Time complexity`** of any algorithm is the time taken by the algorithm to complete. It is an important metric to show the efficiency of the algorithm and for comparative analysis. We tend to reduce the time complexity of algorithm that makes it more effective.
