@@ -1,18 +1,19 @@
 <h1 align="center">C++ Basic to Advanced</h1>
 
 There are **95 keywords** in **C++**, of which around **30** are not-available in the **C** Language. <br>
-Example:- `int`, `break`, `void`, `public`, `return` etc...
-
+```c++
+int, long, break, void, auto, return, case, char, const, continue, default, do, double, else, enum, extern, float, for, goto, if, long, register, short, signed, sizeof, static, struct, switch, typedef, union, unsigned, volatile, while. 
+```
 ## 1 - DataType:
-There are Three type of *DataTypes* in C++. 
+There are Three type of DataType in C++ Programming. 
 
 **Primitive DataTypes** : <br>
 ```c++
 int, float, char, bool, double float, void, wchar_t. 
 ```
-**Dreived DataTypes** : <br>
+**Derived DataTypes** : <br>
 ```
-function(), Array[], pointer(*), reference(&).
+Function(), Array[], Pointer(*), Reference(&).
 ```
 **Abstract/User-Defined DataTypes** :<br>
 ```c++
@@ -20,14 +21,17 @@ class(), struct(), union(), enum(), typedef()
 ```
 ## Operators:
 -   **Unary Operators:**
-    -   It is only a single operand, increment`++` & decrement`--`.   
+    -   It is only a single operand, Increment `++` and Decrement `--`.   
 
--   **Binary Operators:**   It is require two operands to act.
-1.	Arithmetic operators  =  `+`, `-`, `*`, `/`, `%`
-2.	Relational Operators  =  `==`, `>=`, `<=`   
-3.	Logical Operators     =  `&&` , `||`
-4.	Assignment Operators  =  `=`  , `+=` 
-5.	Bitwise Operator      =  `^`
+-   **Binary Operators:**   It is require two operands to acts like, 
+
+|No. |    Operator          |value |
+|:---|:---------------------|:----:|
+|1	 |Arithmetic operators  |  `+`, `-`, `*`, `/`, `%`|
+|2	 |Relational Operators  |  `==`, `>=`, `<=`       |
+|3	 |Logical Operators     |  `&&` , `OR`            |
+|4	 |Assignment Operators  |  `=`  , `+=`            | 
+|5	 |Bitwise Operator      |  `^`                    |
 
 -   **Ternary Operator:**
     -   The operator that require three operands to act.
@@ -117,7 +121,7 @@ Such as `sum(int, int)`, `swap(int, int)`, `void display()` etc...
 
 **Creating Function in C++:**
 <p align="center">
-    <img alt="This is a image" src="user-defined-function.png" title="user-define function" width="50%" height=130 />    
+    <img alt="This is a image" src="user-defined-function.png" title="user-define function" width="60%" height=130 />    
 </p>
 
 ### Function Parameters:
@@ -205,6 +209,9 @@ int main(){
 **Time complexity** of any algorithm is the time taken by the algorithm to complete. It is an important metric to show the efficiency of the algorithm and for comparative analysis. We tend to reduce the time complexity of algorithm that makes it more effective.
 
 **There are different types of time complexities used, let’s see one by one:**
+<!-- 
+<p align="right">
+<img alt="time complecity" src="time-complexity.png" height=270 width=310 title="AdarshTheki"/> -->
 
 1. Constant time – **O(1)**
 2. Linear time – **O(n)**
@@ -218,16 +225,15 @@ Arrays are used to store multiple values in a single variable, instead of declar
 
 To declare an array, define the variable type, specify the name of the array followed by square brackets and specify the number of elements it should store:
 ```c++
-int array[4] = {40,45,50,55};   // declaration
-int =  4 Bytes
-Array = 4 X 4 bytes = 16 bytes
+int array[4] = {40,45,50,55}; // declaration
+int =  4 Bytes                // 4 X 4 bytes = 16 bytes
 ```
 ## 8 - 2D Array:
 
 **The multidimensional Array is also known as Rectangular Arrays in C++**. It can be two dimensional or three dimensional. The data is stored in tabular form (row ∗ column) which is also known as matrix.
 ```c++
 int main(){
-    Int arr[n][m];  //declaration of 2D array
+    int arr[n][m];  //declaration of 2D array
     bool arr[n][m];
     char arr[n][m];
     float arr[n][m];
@@ -239,9 +245,8 @@ int main(){
 
 **`&` Operator:** It gives the address of the variable.
 
-**`*` Operator:** It gives the value stored at the address, i.e dereferences the value stored at the address
+**`*` Operator:** It gives the value stored at the address, i.e dereferences the value stored at the address. *example:-*
 ```c++
-Example:
 void swap(int *a, int *b){
 int temp = *a;
 *a = *b;
@@ -250,15 +255,11 @@ int temp = *a;
 ```
 ## 10. STL-Strings:
 
-**Character Array:**
-- Need to know size beforehand.
-- Larger size required for operation (concatenates or append).
-- No terminating extra character.
-
-**String:** 
-- Need to know size beforehand.
-- Performing operation like concatenating and append is easier.
-- Terminated with a special character ‘\0’.
+|Sr. |**Character Array:**                                          |**String:** |
+|:--:|:-------------------------------------------------------------|:---------------------------|
+|1.  |Need to know size beforehand.                                 |Need to know size beforehand.|
+|2.  |Larger size required for operation (concatenates or append).  |Performing operation like concatenating and append is easier.|
+|3.  |No terminating extra character.                               |Terminated with a special character ‘\0’.|
 
 **In-Build Function:-**
 ```c++
@@ -300,35 +301,28 @@ int sum(int n){
 }
 ```
 ## 14. Permutation:
-**`A permutation` ,** also called an **`arrangement number`** or **`order`**, is a rearrangement of the elements of an ordered list S into a one-to-one correspondence with S itself. A string of length n has **`n!`** permutation.
+**A permutation**, also called an **arrangement number** or **order**, is a rearrangement of the elements of an ordered list S into a one-to-one correspondence with S itself. A string of length n has `n!`** permutation.
 
 **Below are the permutations of string ABC.**
 ```
-    “ABC”, “ACB”, “BAC”, “BCA”, “CBA”, “CAB”
+“ABC”, “ACB”, “BAC”, “BCA”, “CBA”, “CAB”
 ```
 ## 15. Basic Concepts in Object-Oriented Programmings: (Oop's)
 
-- **`Classes` -** Basic template for creating objects.
-- **`Objects` –** Basic run-time entities.
-- **`Data Abstraction` & `Encapsulation` –** Wrapping data and functions into a single unit.
-- **`Inheritance` –** Properties of one class can be inherited into others.
-- **`Polymorphism` –** Ability to take more than one forms.
-- **`Dynamic Binding` –** Code which will execute is not known until the program runs.
-- **`Message Passing` –** message (Information) call format.
+- **Classes -** Basic template for creating objects.
+- **Objects –** Basic run-time entities.
+- **Data Abstraction** & **Encapsulation –** Wrapping data and functions into a single unit.
+- **Inheritance –** Properties of one class can be inherited into others.
+- **Polymorphism –** Ability to take more than one forms.
+- **Dynamic Binding –** Code which will execute is not known until the program runs.
+- **`Message Passing –** message (Information) call format.
 
 #### Difference between Pop’s and Oop’s:
 
-**Procedure Oriented Programming:**
-
-- Consists of writing a set of instruction for the computer to follow.
-- The main focus is on functions and not on the flow of data.
-- Functions can either use local or global data.
-- Data moves openly from function to function.
-
-**Object-Oriented Programming:**
-
-- Works on the concept of classes and object.
-- A class is a template to create objects.
-- Treats data as a critical element.
-- Decomposes the problem in objects and builds data and functions around the objects.
+|No.|**Pop's**|**Oop's**
+|:--|:----------------------------------|:---------------|
+|1.|Consists of writing a set of instruction for the computer to follow.|Works on the concept of classes and object.
+|2.|The main focus is on functions and not on the flow of data.|A class is a template to create objects.
+|3.|Functions can either use local or global data.|  Treats data as a critical element.
+|4.|Data moves openly from function to function.| Decomposes the problem in objects and builds data and functions around the objects.
 
