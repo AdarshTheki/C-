@@ -1,18 +1,17 @@
 <h1 align="center">C++ Basic to Advanced</h1>
 
 ---
-<b>
-There are `95 keywords` in `C++`, of Which around `30` are Not-Available in the `C` Language. Example:- `int`, `break`, `void`, `public`, `return` etc...
-</b>
+
+There are **95 keywords** in **C++**, of which around **30** are not-available in the **C** Language. Example:- `int`, `break`, `void`, `public`, `return` etc...
 
 ## 1 - Data Type:
-There are three data types in C++. which are `Primitive DataTypes`, `Abstract / User-Defined DataTypes`, & `Derived Data Types`. 
+There are three DataTypes in C++. which are `Primitive`, `Abstract/User-Defined`, & `Derived DataTypes`. 
 
-Primitive DataTypes includes: `int`, `float`, `chr`, `bool`, `double float`, `valueless` or `void`, and `wchar_t`.
+**Primitive DataTypes** includes: `int`, `float`, `chr`, `bool`, `double float`, `valueless` or `void`, and `wchar_t`.
 
-Dreived DataTypes includes: `function`, `Array`, `pointer` & `Reference`.
+**Dreived DataTypes** includes: `function`, `Array`, `pointer` & `Reference`.
 
-Abstract / User-Defined DataTypes includes: `class`, `Structure`, `Unoin`, `Enum` & `typedef`.
+**Abstract/User-Defined DataTypes** includes: `class`, `Structure`, `Unoin`, `Enum` & `typedef`.
 
 ## Operators:
 -   **Unary Operators:**
