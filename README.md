@@ -1,7 +1,9 @@
 <h1 align="center">C++ Basic to Advanced</h1>
----
 
+---
+<b>
 There are `95 keywords` in `C++`, of Which around `30` are Not-Available in the `C` Language. Example:- `int`, `break`, `void`, `public`, `return` etc...
+</b>
 
 ## 1 - Data Type:
 There are three data types in C++. which are `Primitive DataTypes`, `Abstract / User-Defined DataTypes`, & `Derived Data Types`. 
