@@ -1,97 +1,92 @@
 <h1 align="center">C++ Basic to Advanced</h1>
 
----
-
 There are **95 keywords** in **C++**, of which around **30** are not-available in the **C** Language. <br>
 Example:- `int`, `break`, `void`, `public`, `return` etc...
 
-## 1 - Data Type:
-There are Three DataTypes in C++. which are `Primitive`, `Abstract/User-Defined`, & `Derived DataTypes`. 
+## 1 - DataType:
+There are Three type of *DataTypes* in C++. 
 
-**Primitive DataTypes** : `int`, `float`, `chr`, `bool`, `double float`, `valueless` or `void`, and `wchar_t`.
-
-**Dreived DataTypes** : `function`, `Array`, `pointer` & `Reference`.
-
-**Abstract/User-Defined DataTypes** : `class`, `Structure`, `Unoin`, `Enum` & `typedef`.
-
+**Primitive DataTypes** : <br>
+```c++
+int, float, char, bool, double float, void, wchar_t. 
+```
+**Dreived DataTypes** : <br>
+```
+function(), Array[], pointer(*), reference(&).
+```
+**Abstract/User-Defined DataTypes** :<br>
+```c++
+class(), struct(), union(), enum(), typedef() 
+```
 ## Operators:
 -   **Unary Operators:**
     -   It is only a single operand, increment`++` & decrement`--`.   
 
 -   **Binary Operators:**   It is require two operands to act.
-    1.	Arithmetic operators  =  `+`, `-`, `*`, `/`, `%`
-    2.	Relational Operators  =  `==`, `>=`, `<=`   
-    3.	Logical Operators     =  `&&` and `||`
-    4.	Assignment Operators  =  `=`, `+=` etc..
-    5.	Bitwise Operator      =  `^`
+1.	Arithmetic operators  =  `+`, `-`, `*`, `/`, `%`
+2.	Relational Operators  =  `==`, `>=`, `<=`   
+3.	Logical Operators     =  `&&` , `||`
+4.	Assignment Operators  =  `=`  , `+=` 
+5.	Bitwise Operator      =  `^`
 
 -   **Ternary Operator:**
     -   The operator that require three operands to act.
-    -   ```c++ syntax:- (a != b)? True : False;  ```
+    -   ```(a != b)? True : False;  ```
 
 -   **Other Operators:**
-    -   sizeof operator:
+    -   SizeOf Operator:
         -   The `sizeof` the operator is used to compute the size of the variable.   ex: `sizeof(int)`.
     -   Comma Operator `,`:
-        -   Comma acts as both operator and separator, and its lowest precedence.
-
-```c++
-int main(){
-    int test;   // declaration
-    test = 5;   // initialization
-    cin>>n;     // Input
-    cout<<n;    // Output (Display)
-}
+        -   Comma (`,`) acts as both operator and separator, and its lowest precedence.
+```c++ 
+int test;   // declaration
+test = 5;   // initialization
+cin>>n;     // Input
+cout<<n;    // Output (Display)
 ```
 ## 2 - Introduction of Loops:
 The C++ for loop is used to iterate a part of the program several times. If the number of iteration is fixed, it is recommended to use `for`, `while` & `do-while` Loops. The C++ for loop is same as C++. We can initialize variable, check condition and increment `++`/ decrement `--` value.
 
 **For loop:**
 ```c++
-Syntax:
 for(init_expt; test_exp; update){
         // statements to execute in the loop body
     }
 ```
 **While Loop:**
 ```c++
-Syntax:
 while (test_expression){
     // statements to execute in the loop body
     update_expression;
 }
 ```
-**Do While loop:** 
+**Do While loop:** <br>
 Note: It will execute at least once irrespective of test condition.
 ```c++
-Syntax:
 do{
     // statements to execute in the loop body
     update_expression;
 }while(test_expression);
 ```
-## 3 - Decision-Making Statements:
+## Decision-Making Statements:
 
-*   **`if`-`else` Statement in C++:**
+1.  **If-Else Statement in C++:**
     -   It is the most simple decision-making statement. A certain condition is true then a block of statement is `executed` otherwise `not`. 
 ```c++
 if (condition) {
-    // Executes this block if
-    // condition is true
+    // Executes this block if condition is true
 }
 else {
-    // Executes this block if
-    // condition is false
+    // Executes this block if condition is false
 }
 ```
-*   **Break and Continue Statement:**
-    -   **Break Statement:** stops the entire process of the loop. also terminates the remaining iterations.
-    -   **Continue Statement:** only stops the current iteration of the loop & doesn't terminate the next iterations; it resumes with the successive iterations.
+2. **Break and Continue Statement:**
+    -   **Break Statement:** Stops the entire process of the loop. also terminates the remaining iterations.
+    -   **Continue Statement:** Only stops the current iteration of the loop & doesn't terminate the next iterations; it resumes with the successive iterations.
 
-*   **Switch-Case Statement:**
+3.   **Switch-Case Statement:**
     -   Use the switch statement to select one of many code `blocks` to be executed.
 ```c++
-// Syntax:
 switch(expression) {
     case x:
         // code block x
@@ -101,61 +96,63 @@ switch(expression) {
         continue;   // doesn't terminate the next iterations
     case z:
         // code block z
-        break;
     default:
         // code block not match x, y & z then executed.
 }
 ```
 ## 4 - Star Pattern for Practice:
-
 In any programming language, star patterns are one of the common patterns that are widely used because it helps to improve logical thinking and flow control knowledge. ***To create pattern in the C++ language, you just have to use two loops or three loops.***
 
 ## 5 - Function:
-*Function is a piece of code that preforms a specific task & can be called many times.* It provides modularity and code reusability.
+*Function is a piece of code that preforms a specific task & can be called many times.* 
 
 ### Types of Functions:
 
-1.  **Built-in Function:** *Built-in functions are standard library functions in C++*. These functions are already defined in C++ header files and `STL` *(Standard template library)*. Header files are special files with `.h extension`. We have to include the header file of the function before calling it using the include directive. such as Headerfile `<cmath>`- `pow(x), sqrt(x)` , `<algorithm>`- `min(), max()`, `<string>`, `ceil(x)`, `cos(x)`, `exp(x)`, etc...
-
-2.  **User-defined functions:** *Functions created by the user for custom requirements. It reduces complexity of a big program and optimizes the code* such as `sum(int, int)`, `swap(int, int)`, `void display()` etc...
+1.  **Built-in Function:** *Built-in functions are standard library functions in C++*. These header files and `STL` *(Standard template library)*. Header files are special files with `.h extension`. We have to include the header file of the function before calling it using the include directive. <br> 
+*Header file* - `<cmath>` , `<algorithm>` etc...<br>
+*built-in function* - `pow()`, `sqrt()`, `min()`, `max()`
+etc..
+2.  **User-defined functions:** *Functions created by the user for custom requirements. It reduces complexity of a big program and optimizes the code*. <br>
+Such as `sum(int, int)`, `swap(int, int)`, `void display()` etc...
 
 **Creating Function in C++:**
-
-<picture>
-    <img alt="User-define-function" src="user-defined-function.png" title="user-define function" width=50%/>    
-</picture>
+<p align="center">
+    <img alt="This is a image" src="user-defined-function.png" title="user-define function" width="50%" height=130 />    
+</p>
 
 ### Function Parameters:
--   **Paramaters/Arguments:** It pass `Name` to function as parameter `Surname` & print the full name.
+-   **Paramaters/Arguments:** <br>
+It pass `Name` to function as parameter `Surname` & print the full name.
 ```c++ 
 void myfunction(string Name){
     cout<<Name<< "Surname";     // Output: Name Surname
 }
 ```
--   **Default Parameter:**   It is default value, by using equals sing `=`.
+-   **Default Parameter:** <br>
+It is default value, by using equals sing `=`.
 ```c++
 void myfunction(string country="India"){
-    cout<<country;     // call myfunction("Sweden") = Output: Sweden  
-    cout<<country;     // call myfunction() default = Output: India
+    cout<<country;  // call myfunction("Sweden") = Output: Sweden  
+    cout<<country;  // call myfunction() default = Output: India
 }
 ```
--   **Multiple parameters:**   Inside the function, you can add as many parameters as you want:
+-   **Multiple parameters:** <br>
+Inside the function, you can add as many parameters as you want:
 ```c++
 void myfunction(string Name, int age){
-    cout<<Name<<" Surname "<<age;  
-}
+    cout<<Name<<" Surname "<<age;  }
 // call myfunction("adarsh", 12) = Output: adarsh Surname 12
 // call myfunction("ayush", 20) = Output: ayush Surname 20
 // call myfunction("ankita", 5) = Output: ankita Surname 5
 ```
--   **Return values:**   If you want the function to `return` a value, you can use a `dataType` inside the function.
+-   **Return values:** <br>
+If you want the function to `return` a value, you can use a `dataType` inside the function.
 ```c++
 int myfunction(int x) {
     return 5 + x;   }
 int main(){
     cout<<myfunction(3);
-}
-//Output: 8 (5 + 3)
+}// Output: 8 (5 + 3)
 ```
 -   **Pass by Reference:** 
 ```c++
@@ -163,7 +160,7 @@ void swap(int &x, int &y){
     int z = x;
     x = y;
     y = z;
-}
+} // Output: a=b, b=a;
 ```
 -   **Pass Arrays:**   You can also pass `Array` to a function.
 ```c++
@@ -183,7 +180,7 @@ int sum(int k){
 }
 ```
 ### Function Overloading:
-It has multiple function can have the **"Same `Function_name` with Different `Parameters`"**.
+It has multiple function can have the **"Same Function_name with Different Parameters"**.
 ```c++
 #include <iostream>
 using namespace std;
@@ -202,10 +199,10 @@ int main(){
     myfunction(d,e);
     myfunction(a,b,c);
     return 0;
-}
+}   
 ```
 ## 6 - Time Complexity:
-**`Time complexity`** of any algorithm is the time taken by the algorithm to complete. It is an important metric to show the efficiency of the algorithm and for comparative analysis. We tend to reduce the time complexity of algorithm that makes it more effective.
+**Time complexity** of any algorithm is the time taken by the algorithm to complete. It is an important metric to show the efficiency of the algorithm and for comparative analysis. We tend to reduce the time complexity of algorithm that makes it more effective.
 
 **There are different types of time complexities used, let’s see one by one:**
 
