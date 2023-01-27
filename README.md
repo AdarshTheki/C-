@@ -120,22 +120,10 @@ In any programming language, star patterns are one of the common patterns that a
 2.  **User-defined functions:** *Functions created by the user for custom requirements. It reduces complexity of a big program and optimizes the code* such as `sum(int, int)`, `swap(int, int)`, `void display()` etc...
 
 **Creating Function in C++:**
-```c++
-#include <iostream>
-using namespace std;
 
-// function declaration
-void myfunction();
-// main function
-int main() {
-    myfunction();  // call the function
-}
-// function definition
-void myfunction(){
-    cout<<"I just got executed!";
-}
-// Output: I just got executed!
-```
+<picture>
+    <img alt="User-define-function" src="user-defined-function.png" title="user-define function" width=50%/>    
+</picture>
 
 ### Function Parameters:
 -   **Paramaters/Arguments:** It pass `Name` to function as parameter `Surname` & print the full name.
