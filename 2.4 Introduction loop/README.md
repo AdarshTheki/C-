@@ -4,15 +4,15 @@ The C++ for loop is used to iterate a part of the program several times. If the 
 
 **For loop:**
 ```c++
-for(initialization expression; test expression; update expression){
+for(int i=0; i<n; i++){
         // statements to execute in the loop body
     }
 ```
 **While Loop:**
 ```c++
-    while (test_expression){
+    while ('condition'){
         // statements to execute in the loop body
-        update_expression;
+        'update_expr';
     }
 ```
 **Do While loop:**
