@@ -2,18 +2,18 @@
 using namespace std;
 
 int main (){
-
     int pocketMoney=300;
-    for(int date=1; date<=30; date++){
-
-        if(date%2==0){
+    for(int i=1; i<=30; i++){
+        if(i%2==0){
+            cout<<"Go Out Today 'continue'"<<endl;
             continue;
         }
-        if(pocketMoney==0){
+        else if(pocketMoney==0){
+            cout<<"Go Out Today 'break'"<<endl;
             break;
         }
-        cout<<"Go Out Today"<<endl;
         pocketMoney=pocketMoney-300;
+        cout<<"'run'"<<i<<"--";
     }
     return 0;
 }
