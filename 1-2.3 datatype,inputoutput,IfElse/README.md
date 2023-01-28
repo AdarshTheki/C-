@@ -1,6 +1,22 @@
-## 1 - Data Type:
+There are **95 keywords** in **C++**, of which around **30** are not-available in the **C** Language. <br>
+```c++
+int, long, break, void, auto, return, case, char, const, continue, default, do, double, else, enum, extern, float, for, goto, if, long, register, short, signed, sizeof, static, struct, switch, typedef, union, unsigned, volatile, while. 
+```
+## 1 - DataType:
+There are Three type of DataType in C++ Programming. 
 
-There are three data types in C++. which are **Primitive Data Types, Abstract Data Types, & Derived Data Types**. Primitive data types includes integer(int), floating-point(float), character(chr), boolean(bool), double floating-point(double float), valueless or void, and wide char().**Initialisation, Size of DataType, Input-Output.**
+**Primitive DataTypes** : 
+```c++
+int, float, char, bool, double float, void, wchar_t. 
+```
+**Derived DataTypes** : 
+```
+Function(), Array[], Pointer(*), Reference(&).
+```
+**Abstract/User-Defined DataTypes** :
+```c++
+class(), struct(), union(), enum(), typedef() 
+```
 ```c++
 int main(){
     int test;   //declaration
