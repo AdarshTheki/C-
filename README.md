@@ -7,15 +7,15 @@ int, long, break, void, auto, return, case, char, const, continue, default, do, 
 ## 1 - DataType:
 There are Three type of DataType in C++ Programming. 
 
-**Primitive DataTypes** : <br>
+**Primitive DataTypes** : 
 ```c++
 int, float, char, bool, double float, void, wchar_t. 
 ```
-**Derived DataTypes** : <br>
+**Derived DataTypes** : 
 ```
 Function(), Array[], Pointer(*), Reference(&).
 ```
-**Abstract/User-Defined DataTypes** :<br>
+**Abstract/User-Defined DataTypes** :
 ```c++
 class(), struct(), union(), enum(), typedef() 
 ```
@@ -25,13 +25,13 @@ class(), struct(), union(), enum(), typedef()
 
 -   **Binary Operators:**   It is require two operands to acts like, 
 
-|No. |    Operator          |value |
-|:---|:---------------------|:----:|
-|1	 |Arithmetic operators  |  `+`, `-`, `*`, `/`, `%`|
-|2	 |Relational Operators  |  `==`, `>=`, `<=`       |
-|3	 |Logical Operators     |  `&&` , `OR`            |
-|4	 |Assignment Operators  |  `=`  , `+=`            | 
-|5	 |Bitwise Operator      |  `^`                    |
+|No. |    Operator         |value |
+|:---|:--------------------|:----:|
+|1	 |Arithmetic operators |`+`, `-`, `*`, `/`, `%`|
+|2	 |Relational Operators |`==`, `>=`, `<=`, `!=`|
+|3	 |Logical Operators    |`&&` , `OR`|
+|4	 |Assignment Operators |`=`, `+=`, `-=`, `*=`, `/=` | 
+|5	 |Bitwise Operator     |`^ `, `~` |
 
 -   **Ternary Operator:**
     -   The operator that require three operands to act.
@@ -65,7 +65,7 @@ while (test_expression){
 }
 ```
 **Do While loop:** <br>
-Note: It will execute at least once irrespective of test condition.
+*Note: It will execute at least once irrespective of test condition.*
 ```c++
 do{
     // statements to execute in the loop body
@@ -212,12 +212,13 @@ int main(){
 <!-- 
 <p align="right">
 <img alt="time complecity" src="time-complexity.png" height=270 width=310 title="AdarshTheki"/> -->
-
-1. Constant time – **O(1)**
-2. Linear time – **O(n)**
-3. Logarithmic time – **O(log n)**
-4. Quadratic time – **O(n^2)**
-5. Cubic time – **O(n^3)**
+|Sr. | Time | value |
+|:---|:-----|:-----:|
+|1.  | Constant time | **O(1)** |
+|2.  | Linear time | **O(n)** |
+|3.  | Logarithmic time | **O(log n)** |
+|4.  | Quadratic time | **O(n^2)** |
+|5.  | Cubic time | **O(n^3)** |
 
 ## 7 - Array:
 
@@ -261,7 +262,7 @@ int temp = *a;
 |2.  |Larger size required for operation (concatenates or append).  |Performing operation like concatenating and append is easier.|
 |3.  |No terminating extra character.                               |Terminated with a special character ‘\0’.|
 
-**In-Build Function:-**
+**Built-In Function:-**
 ```c++
     getline(cin, s);        // input string
     s1.append(s2);          // insert s1+s2
@@ -289,7 +290,7 @@ int temp = *a;
     sort(s.begin(), s.end(), greater<int>());               // 999887443 sort
 ```
 ## 13. Recursion:-
-**Definition:** It is when a function all itself to make the problem smaller.<br>
+**Definition:** *It is when a function all itself to make the problem smaller.* <br>
 Ex: To get the sum of the first 'n' number using recursion.
 ```c++
 int sum(int n){
@@ -307,7 +308,7 @@ int sum(int n){
 ```
 “ABC”, “ACB”, “BAC”, “BCA”, “CBA”, “CAB”
 ```
-## 15. Basic Concepts in Object-Oriented Programmings: (Oop's)
+## 15. Object-Oriented Programmings: (Oop's)
 
 - **Classes -** Basic template for creating objects.
 - **Objects –** Basic run-time entities.
@@ -319,8 +320,8 @@ int sum(int n){
 
 #### Difference between Pop’s and Oop’s:
 
-|No.|**Pop's**|**Oop's**
-|:--|:----------------------------------|:---------------|
+|No.|**POP's**|**OOP's**
+|:--:|:----------------------------------|:---------------|
 |1.|Consists of writing a set of instruction for the computer to follow.|Works on the concept of classes and object.
 |2.|The main focus is on functions and not on the flow of data.|A class is a template to create objects.
 |3.|Functions can either use local or global data.|  Treats data as a critical element.
