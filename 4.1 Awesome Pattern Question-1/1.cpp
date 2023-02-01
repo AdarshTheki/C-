@@ -17,4 +17,4 @@ int main(){
     }
     return 0;
 }
-// This methd tearn to 1000+ star pattern you will create, Please follow this method. 
+// This methd tearn to 1,000+ star pattern you will create, Please follow this method. 
