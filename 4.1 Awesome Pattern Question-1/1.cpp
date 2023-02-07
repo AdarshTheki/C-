@@ -2,7 +2,7 @@
 using namespace std;
 
 int main(){
-    // Create inputs of how manys rows and columns are there.
+    // Create inputs of how many's rows and columns are there.
     int row, col;
     cin>>row>>col;
 
@@ -17,4 +17,4 @@ int main(){
     }
     return 0;
 }
-// This methd tearn to 1,000+ star pattern you will create, Please follow this method. 
+// This method tearn to 1,000+ star pattern you will create, Please follow this method. 

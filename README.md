@@ -125,7 +125,7 @@ Such as `sum(int, int)`, `swap(int, int)`, `void display()` etc...
 </p>
 
 ### Function Parameters:
--   **Paramaters/Arguments:** <br>
+-   **Parameters/Arguments:** <br>
 It pass `Name` to function as parameter `Surname` & print the full name.
 ```c++ 
 void myfunction(string Name){
@@ -174,7 +174,7 @@ void myfunction(int arr[], int n){
     }
 }
 ```
--   **Recusion Function:** 
+-   **Recursion Function:** 
 ```c++
 int sum(int k){
     if(k > 0)
